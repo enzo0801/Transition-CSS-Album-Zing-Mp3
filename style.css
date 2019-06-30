@@ -1,0 +1,30 @@
+.album-item {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://picsum.photos/200/300);
+    background-size: cover;
+    background-position: center;
+}
+
+.album-item .overlay {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.album-item .overlay img {
+    transform: scale(0.5);
+    transition: all 0.3s;
+}
+
+.album-item:hover .overlay {
+    opacity: 1;
+}
+
+.album-item:hover .overlay img {
+    transform: scale(1);
+}
